@@ -7,7 +7,7 @@ class Connection {
     console.log('creating conneciton...')
     this.pool = mysql.createPool({
       connectionLimit: 100,
-      host: '35.222.166.74',
+      host: 'den1.mysql6.gear.host',
       user: process.env.CONNECTION_USERNAME,
       password: process.env.CONNECTION_PASSWORD,
       database: 'restfulapi'
