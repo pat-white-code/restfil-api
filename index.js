@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const port = process.env.PORT || 8080;
 
 // ROUTER IMPORTS GO HERE
-// const usersRouter = require('/api/routes/users')
+const usersRouter = require('./api/routes/users');
 
 app.use(bodyParser.json());
 
@@ -14,7 +14,7 @@ app.get('/test', (req, res)=> {
 })
 
 // ROUTERS MOUNTED HERE
-// app.use('/api/users', usersRouter);
+app.use('/api/users', usersRouter);
 
 
 app.listen(port, ()=> {
